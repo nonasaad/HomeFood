@@ -14,11 +14,11 @@ public class LoginDao {
         PreparedStatement pst = null;
         ResultSet rs = null;
         
-        String driver = "com.mysql.jdbc.Driver";
+       // String driver = "com.mysql.jdbc.Driver";
         try {
-            Class.forName(driver).newInstance();
-            pst = conn
-                    .prepareStatement("select * from person where email=? and password=?");
+            //Class.forName(driver).newInstance();
+            pst = (PreparedStatement) conn.prepareStatement("select * from person where email=? and password=?");
+          
             pst.setString(1, email);
             pst.setString(2, pass);
 

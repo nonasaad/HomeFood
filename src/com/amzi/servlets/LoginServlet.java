@@ -8,7 +8,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.amzi.dao.LoginDao;
 
@@ -22,12 +21,10 @@ public class LoginServlet extends HttpServlet{
         response.setContentType("text/html");  
         PrintWriter out = response.getWriter();  
         
-        String n=request.getParameter("username");  
-        String p=request.getParameter("userpass"); 
-        
-        HttpSession session = request.getSession(false);
-        if(session!=null)
-        session.setAttribute("name", n);
+        String n=request.getParameter("email"); //For Debugging 
+        System.out.println(n);
+        String p=request.getParameter("password"); //For Debugging
+        System.out.println(p);
 
         if(LoginDao.validate(n, p)){  
             RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");  

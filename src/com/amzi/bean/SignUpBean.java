@@ -3,7 +3,7 @@ package com.amzi.bean;
 import java.sql.Date;
 
 public class SignUpBean {
-	private String firstName;
+	private String fullName;
 	private String lastName;
 	private String email;
 	private String password;
@@ -12,33 +12,19 @@ public class SignUpBean {
 	private String postalcode;
 	private String address;
 	private Date createdDate; 
-	private long phone;
 	
 	/**
-	 * @return the firstName
+	 * @return the fullName
 	 */
-	public String getFirstName() {
-		return firstName;
+	public String getFullName() {
+		return fullName;
 	}
 
 	/**
-	 * @param firstName the firstName to set
+	 * @param fullName the fullName to set
 	 */
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	/**
-	 * @return the lastName
-	 */
-	public String getLastName() {
-		return lastName;
-	}
-
-	/**
-	 * @param lastName the lastName to set
-	 */
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 	/**
 	 * @return the password
@@ -65,19 +51,6 @@ public class SignUpBean {
 	 */
 	public String getEmail() {
 		return email;
-	}
-
-	/**
-	 * @param phone the phone to set
-	 */
-	public void setPhone(long phone) {
-		this.phone = phone;
-	}
-	/**
-	 * @return the phone
-	 */
-	public long getPhone() {
-		return phone;
 	}
 	/**
 	 * @return the country
