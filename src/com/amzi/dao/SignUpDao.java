@@ -31,10 +31,10 @@ public class SignUpDao {
 		try {
 			//Class.forName(driver).newInstance();
 			pst = (PreparedStatement) conn.prepareStatement(
-					"insert into person(first_name,email,password) values (?,?,?)");
+					"insert into person(full_name,email,password) values (?,?,?)");
 			pst.setString(1, fullName);
-			pst.setString(3, email);
-			pst.setString(4, password);
+			pst.setString(2, email);
+			pst.setString(3, password);
 
 			int i = pst.executeUpdate();
 			if (i != 0) // Just to ensure data has been inserted into the database
