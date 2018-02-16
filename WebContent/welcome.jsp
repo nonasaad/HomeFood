@@ -48,6 +48,8 @@
          	<img src="resources/images/indian_pic.jpg" height="250" width="300" class="rounded-image"/>
      	 </a>
     </div>
+    <br>
+    <a href="LogoutServlet">Log out</a>
     
 </div>
 </body>

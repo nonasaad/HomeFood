@@ -11,8 +11,7 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
-  
+   
    <servlet>
     <servlet-name>signUp</servlet-name>
     <servlet-class>com.amzi.servlets.SignUpServlet</servlet-class>
@@ -20,6 +19,18 @@
   <servlet-mapping>
     <servlet-name>signUp</servlet-name>
     <url-pattern>/SingUpServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+     <servlet>
+    <servlet-name>logOut</servlet-name>
+    <servlet-class>com.amzi.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logOut</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
