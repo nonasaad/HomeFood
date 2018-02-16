@@ -9,7 +9,7 @@
 
  <body background="resources/images/welcome_background.jpg"> 
   
-        <h1><center><b>Welcome to your Homemade Food Website and delivery service</b></center></h1>
+        <h1><center><b>Welcome to your Homemade Food</b></center></h1>
  
 <div id="wrapper">
 

@@ -23,7 +23,7 @@
 					</div>
 					<div class="col_md_sign_up">
 						<div class="cont_ba_opcitiy">
-							<h2>Register</h2>
+							<h2>Sign Up</h2>
 
 							<button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN
 								UP</button>
