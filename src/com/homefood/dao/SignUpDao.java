@@ -1,12 +1,13 @@
-package com.amzi.dao;
+package com.homefood.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.Date;
 
-import com.amzi.bean.SignUpBean;
-import com.amzi.util.DBConnection;
+import com.homefood.bean.SignUpBean;
+import com.homefood.util.DBConnection;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 

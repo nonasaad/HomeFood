@@ -1,11 +1,11 @@
-package com.amzi.dao;
+package com.homefood.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.amzi.util.DBConnection;
+import com.homefood.util.DBConnection;
 
 public class LoginDao {
     public static boolean validate(String email, String pass) {        

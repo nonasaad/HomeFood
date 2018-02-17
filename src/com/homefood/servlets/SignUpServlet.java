@@ -1,4 +1,4 @@
-package com.amzi.servlets;
+package com.homefood.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.amzi.bean.SignUpBean;
-import com.amzi.dao.SignUpDao;
+import com.homefood.bean.SignUpBean;
+import com.homefood.dao.SignUpDao;
 
 public class SignUpServlet extends HttpServlet {
 

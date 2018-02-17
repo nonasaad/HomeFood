@@ -1,4 +1,4 @@
-package com.amzi.util;
+package com.homefood.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

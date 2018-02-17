@@ -1,4 +1,4 @@
-package com.amzi.servlets;
+package com.homefood.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.amzi.dao.LoginDao;
+import com.homefood.dao.LoginDao;
 
 public class LoginServlet extends HttpServlet{
 

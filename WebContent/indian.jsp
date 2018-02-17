@@ -4,11 +4,49 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Indian Kitchen</title>
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="resources/css/stylesheet.css">
+<title>Indian Cuisine</title>
 
- <h1>Try Indian Food</h1>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+}
+</style>
+</head>
+<body bgcolor="#FCF3CF">
+    <center><h1>Indian MENU</h1></center>
+    <br><br><br>
+    
+    <table>
+  <tr>
+    <th>Dishes</th>
+    <th>Prices</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Chicken Biriani</td>
+    <td>$13.45</td>
+    <td><img src="resources/images/indian_food_biriani.jpg" class="rounded-image"></td>
+  </tr>
+  <tr>
+    <td>Bhaji</td>
+    <td>$11.50</td>
+    <td><img src="resources/images/indian_food_bhaji.jpg" class="rounded-image"></td>
+  </tr>
+  <tr>
+    <td>Kuzhambu</td>
+    <td>$10.25</td>
+    <td><img src="resources/images/indian_food_kuzhambu.jpg" class="rounded-image"></td>
+  </tr>
+
+</table>
 
 </body>
 </html>

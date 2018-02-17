@@ -1,4 +1,4 @@
-package com.amzi.servlets;
+package com.homefood.servlets;
 
 import java.io.IOException;  
 import java.io.PrintWriter;  

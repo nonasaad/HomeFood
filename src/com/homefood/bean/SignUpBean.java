@@ -1,4 +1,4 @@
-package com.amzi.bean;
+package com.homefood.bean;
 
 import java.sql.Date;
 
