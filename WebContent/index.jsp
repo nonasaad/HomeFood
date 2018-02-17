@@ -20,7 +20,7 @@
 <div style="float: right;">
 <small>
  <% out.print(trans.getLangTransString("Language"));%> 
- <button onclick="<% trans.setLanguage("en", "CA");%> location.reload();"><% out.print(trans.getLangTransString("English"));%></button>
+ <button onclick="<% trans.setLanguage("en", "CA");%> location.reload(true);"><% out.print(trans.getLangTransString("English"));%></button>
  <button onclick="<% trans.setLanguage("fr", "CA");%> location.reload(true);"><% out.print(trans.getLangTransString("French"));%></button>
  
  <!--  
