@@ -1,17 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
- <%@ page import = "com.homefood.Iocale.Internationalization" %>
-    
-<%
-   Internationalization trans = new Internationalization();
-
+<%@ page import = "com.homefood.Iocale.Internationalization" %>
+<%@ page session="true" %>
+<% 
+Internationalization trans = new Internationalization();
+String lang = "en";
+if( null == session.getAttribute( "lang" ) ) 
+	session.setAttribute("lang", lang);
+else if ("fr".equals( session.getAttribute("lang" ) ) )
+    lang = "fr";
+else 
+    lang = "en";
+          
+String lbl_title  = trans.getTrans(lang,"Welcome");
+String lbl_flang  = trans.getTrans(lang,"French");
+String lbl_elang  = trans.getTrans(lang,"English");
 %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="resources/css/stylesheet.css">
-<title><%trans.getLangTransString("Welcome");%></title>
+<title><%out.print(lbl_title);%></title>
 </head>
  <body bgcolor="#F9E79F"> 
   

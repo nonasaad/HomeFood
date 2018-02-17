@@ -1,11 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ 
+<%@ page import = "com.homefood.Iocale.Internationalization" %>
+<%@ page session="true" %>
+<% 
+Internationalization trans = new Internationalization();
+String lang = "en";
+if( null == session.getAttribute( "lang" ) ) 
+	session.setAttribute("lang", lang);
+else if ("fr".equals( session.getAttribute("lang" ) ) )
+    lang = "fr";
+else 
+    lang = "en";
+          
+String lbl_title  = trans.getTrans(lang,"Italian Cuisine");
+String lbl_flang  = trans.getTrans(lang,"French");
+String lbl_elang  = trans.getTrans(lang,"English");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="resources/css/stylesheet.css">
-<title>Italian Cuisine</title>
+<title><%out.print(lbl_title); %></title>
 
 <style>
 table {
