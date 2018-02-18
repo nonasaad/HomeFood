@@ -1,4 +1,4 @@
-/* ------------------------------------ Click on login and Sign Up to  changue and view the effect
+/* ------------------------------------ Click on login and Sign Up to  change and view the effect
 ---------------------------------------
 */
 div#wrapper{
@@ -68,7 +68,7 @@ top:100px;
 position: relative;
   float: left;
   width: 640px;
-  height: 280px;
+  height: 280px; 
 overflow: hidden;
   background-color: #fff;
   margin-top: 100px;
