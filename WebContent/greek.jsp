@@ -15,6 +15,12 @@ else
 String lbl_title  = trans.getTrans(lang,"Greek Cuisine");
 String lbl_flang  = trans.getTrans(lang,"French");
 String lbl_elang  = trans.getTrans(lang,"English");
+String lbl_Greek_Menu  = trans.getTrans(lang," Greek Menu");
+String lbl_dishes  = trans.getTrans(lang,"Dishes");
+String lbl_prices  = trans.getTrans(lang,"Prices");
+String lbl_Gigantes_Plaki  = trans.getTrans(lang,"Gigantes Plaki - White beans");
+String lbl_Grape_Leaves  = trans.getTrans(lang,"Grape Leaves");
+String lbl_G_Checken_Salad  = trans.getTrans(lang,"Grilled Chicken Salad");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -37,27 +43,33 @@ td, th {
 </style>
 </head>
 <body bgcolor="#FCF3CF">
-    <center><h1>Greek MENU</h1></center>
+    <center><h1>lbl_Greek_Menu</h1></center>
     <br><br><br>
     
     <table>
   <tr>
-    <th>Dishes</th>
+       <th>Dishes</th>
+         		 <h2><center><b><%out.print(lbl_dishes);%></b></center></h2>
+    
     <th>Prices</th>
+         		 <h2><center><b><%out.print(lbl_prices);%></b></center></h2>
     <th></th>
   </tr>
   <tr>
     <td>Gigantes Plaki - White beans</td>
+    <h2><center><b><%out.print(lbl_Gigantes_Plaki);%></b></center></h2>
     <td>$9.65</td>
     <td><img src="resources/images/greek_food_gigantes.jpg" class="rounded-image"></td>
   </tr>
   <tr>
     <td>Grape Leaves</td>
+    <h2><center><b><%out.print(lbl_Grape_Leaves);%></b></center></h2>
     <td>$7.75</td>
     <td><img src="resources/images/greek_food_leaves.jpg" class="rounded-image"></td>
   </tr>
   <tr>
     <td>Grilled Chicken Salad</td>
+    <h2><center><b><%out.print(lbl_G_Checken_Salad);%></b></center></h2>
     <td>$13.25</td>
     <td><img src="resources/images/greek_food_salad.jpg" class="rounded-image"></td>
   </tr>

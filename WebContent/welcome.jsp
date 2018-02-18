@@ -16,6 +16,11 @@ else
 String lbl_title  = trans.getTrans(lang,"Welcome");
 String lbl_flang  = trans.getTrans(lang,"French");
 String lbl_elang  = trans.getTrans(lang,"English");
+String lbl_header  = trans.getTrans(lang,"Welcome to Homemade Food");
+String lbl_italian  = trans.getTrans(lang,"Italian Cuisine");
+String lbl_greek  = trans.getTrans(lang,"Greek Cuisine");
+String lbl_chinese  = trans.getTrans(lang,"Chinese Cuisine");
+String lbl_indian  = trans.getTrans(lang,"Indian Cuisine");
 %>
 <html>
 <head>
@@ -25,13 +30,15 @@ String lbl_elang  = trans.getTrans(lang,"English");
 </head>
  <body bgcolor="#F9E79F"> 
   
-        <h1><center><b>Welcome to Homemade Food</b></center></h1>
- 
+        <h1><center><b><%out.print(lbl_header);%></b></center></h1>
+           
+        
+
 <div id="wrapper">
 
     <div class="imgContent">
     	 <a style="text-decoration:none;" href="italian.jsp">
-     		 <h2>Italian Cuisine</h2>
+     		 <h2><center><b><%out.print(lbl_italian);%></b></center></h2>
       	 </a>
      	 <a href="italian.jsp">
        		 <img src="resources/images/italian_pic.jpg" height="250" width="300" class="rounded-image"/>
@@ -40,7 +47,7 @@ String lbl_elang  = trans.getTrans(lang,"English");
   
     <div class="imgContent">
     	<a style="text-decoration:none;" href="greek.jsp">
-     		 <h2>Greek Cuisine</h2>
+     		 <h2><center><b><%out.print(lbl_greek);%></b></center></h2>
       	 </a>
      	<a href="greek.jsp">
        		 <img src="resources/images/greek_pic.jpg" height="250" width="300" class="rounded-image"/>
@@ -49,7 +56,7 @@ String lbl_elang  = trans.getTrans(lang,"English");
     
     <div class="imgContent">
     	<a style="text-decoration:none;" href="chinese.jsp">
-     		  <h2>Chinese Cuisine</h2>
+     		  <h2><center><b><%out.print(lbl_chinese);%></b></center></h2>
       	</a>
     	 <a href="chinese.jsp">
          	<img src="resources/images/chinese_pic.jpg" height="250" width="300" class="rounded-image"/>
@@ -58,7 +65,7 @@ String lbl_elang  = trans.getTrans(lang,"English");
   
     <div class="imgContent">
    	 	<a style="text-decoration:none;" href="indian.jsp">
-     		  <h2>Indian Cuisine</h2>
+     		  <h2><center><b><%out.print(lbl_indian);%></b></center></h2>
       	</a>
      	<a href="indian.jsp"> 
          	<img src="resources/images/indian_pic.jpg" height="250" width="300" class="rounded-image"/>
