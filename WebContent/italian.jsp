@@ -82,6 +82,11 @@ String lbl_breaded_eggplant  = trans.getTrans(lang,"Breaded Eggplant Rollatini")
 String lbl_Chicken_Lasagna  = trans.getTrans(lang,"Chicken Lasagna");
 String lbl_Stracciatella_Soup  = trans.getTrans(lang,"Stracciatella Soup");
 
+String lbl_home = trans.getTrans(lang,"Home");
+String lbl_news = trans.getTrans(lang,"News");
+String lbl_contact = trans.getTrans(lang,"Contact");
+String lbl_about = trans.getTrans(lang,"About");
+
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -105,7 +110,27 @@ td, th {
 </head>
 
  <body bgcolor="#FCF3CF">
- 
+		<div class="topnav">
+		  <a class="active" href="welcome.jsp"><%out.print(lbl_home);%></a>
+		  <a href="#news"><%out.print(lbl_news);%></a>
+		  <a href="#contact"><%out.print(lbl_contact);%></a>
+		  <a href="#about"><%out.print(lbl_about);%></a>
+		  <div style="float: right;">
+	 			<small>
+	 				<% 
+	 					if(lang.equals("fr")) {
+	 					  	out.print("<a href=\"setlang.jsp?lang=en\">");
+	 					  	out.print(lbl_elang);
+	 					} else {
+	 						 out.print("<a href=\"setlang.jsp?lang=fr\">");
+	 						out.print(lbl_flang);
+	 					}
+	 					out.print("</a>");
+	 				%>
+			 		
+		 		</small>
+			</div>
+		</div> 
 
  
  

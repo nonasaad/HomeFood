@@ -75,6 +75,12 @@ String lbl_prices  = trans.getTrans(lang,"Prices");
 String lbl_noodles = trans.getTrans(lang,"Noodles");
 String lbl_ramen  = trans.getTrans(lang,"Ramen");
 String lbl_sushi  = trans.getTrans(lang,"sushis");
+
+String lbl_home = trans.getTrans(lang,"Home");
+String lbl_news = trans.getTrans(lang,"News");
+String lbl_contact = trans.getTrans(lang,"Contact");
+String lbl_about = trans.getTrans(lang,"About");
+
 %>
      
 
@@ -99,6 +105,12 @@ td, th {
 </style>
 </head>
 <body bgcolor="#FCF3CF">
+		<div class="topnav">
+		  <a class="active" href="welcome.jsp"><%out.print(lbl_home);%></a>
+		  <a href="#news"><%out.print(lbl_news);%></a>
+		  <a href="#contact"><%out.print(lbl_contact);%></a>
+		  <a href="#about"><%out.print(lbl_about);%></a>
+		</div> 
 
      		 <h2><center><b><%out.print(lbl_chinese_Menu);%></b></center></h2>
     
