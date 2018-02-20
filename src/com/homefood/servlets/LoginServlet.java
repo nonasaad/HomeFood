@@ -21,17 +21,19 @@ public class LoginServlet extends HttpServlet{
         response.setContentType("text/html");  
         PrintWriter out = response.getWriter();  
         
-        String n=request.getParameter("email"); //For Debugging 
-        System.out.println(n);
-        String p=request.getParameter("password"); //For Debugging
-        System.out.println(p);
+        String n=request.getParameter("username"); 
+        //For Debugging
+        //System.out.println(n);
+        String p=request.getParameter("userpass"); 
+        //For Debugging
+        //System.out.println(p);
 
         if(LoginDao.validate(n, p)){  
             RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");  
             rd.forward(request,response);  
         }  
-        else{  
-            out.print("<p style=\"color:red\">Sorry username or password error</p>");  
+        else{        	
+            request.setAttribute("status", "false");
             RequestDispatcher rd=request.getRequestDispatcher("index.jsp");  
             rd.include(request,response);  
         }  

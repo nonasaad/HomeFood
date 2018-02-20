@@ -21,6 +21,12 @@ String lbl_prices  = trans.getTrans(lang,"Prices");
 String lbl_Gigantes_Plaki  = trans.getTrans(lang,"Gigantes Plaki - White beans");
 String lbl_Grape_Leaves  = trans.getTrans(lang,"Grape Leaves");
 String lbl_G_Checken_Salad  = trans.getTrans(lang,"Grilled Chicken Salad");
+
+String lbl_home = trans.getTrans(lang,"Home");
+String lbl_news = trans.getTrans(lang,"News");
+String lbl_contact = trans.getTrans(lang,"Contact");
+String lbl_about = trans.getTrans(lang,"About");
+
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -43,6 +49,13 @@ td, th {
 </style>
 </head>
 <body bgcolor="#FCF3CF">
+		<div class="topnav">
+		  <a class="active" href="welcome.jsp"><%out.print(lbl_home);%></a>
+		  <a href="#news"><%out.print(lbl_news);%></a>
+		  <a href="#contact"><%out.print(lbl_contact);%></a>
+		  <a href="#about"><%out.print(lbl_about);%></a>
+		</div> 
+	
     <center><h1>lbl_Greek_Menu</h1></center>
     <br><br><br>
     

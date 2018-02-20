@@ -21,6 +21,12 @@ String lbl_italian  = trans.getTrans(lang,"Italian Cuisine");
 String lbl_greek  = trans.getTrans(lang,"Greek Cuisine");
 String lbl_chinese  = trans.getTrans(lang,"Chinese Cuisine");
 String lbl_indian  = trans.getTrans(lang,"Indian Cuisine");
+
+String lbl_home = trans.getTrans(lang,"Home");
+String lbl_news = trans.getTrans(lang,"News");
+String lbl_contact = trans.getTrans(lang,"Contact");
+String lbl_about = trans.getTrans(lang,"About");
+
 %>
 <html>
 <head>
@@ -29,13 +35,32 @@ String lbl_indian  = trans.getTrans(lang,"Indian Cuisine");
 <title><%out.print(lbl_title);%></title>
 </head>
  <body bgcolor="#F9E79F"> 
-  
-        <h1><center><b><%out.print(lbl_header);%></b></center></h1>
-           
-        
-
+ 
 <div id="wrapper">
-
+		<div class="topnav">
+		  <a class="active" href="welcome.jsp"><%out.print(lbl_home);%></a>
+		  <a href="#news"><%out.print(lbl_news);%></a>
+		  <a href="#contact"><%out.print(lbl_contact);%></a>
+		  <a href="#about"><%out.print(lbl_about);%></a>
+		  <div style="float: right;">
+	 			<small>
+	 				<% 
+	 					if(lang.equals("fr")) {
+	 					  	out.print("<a href=\"setlang.jsp?lang=en\">");
+	 					  	out.print(lbl_elang);
+	 					} else {
+	 						 out.print("<a href=\"setlang.jsp?lang=fr\">");
+	 						out.print(lbl_flang);
+	 					}
+	 					out.print("</a>");
+	 				%>
+			 		
+		 		</small>
+			</div>
+		</div> 
+		 
+        <h1><center><b><%out.print(lbl_header);%></b></center></h1>
+        
     <div class="imgContent">
     	 <a style="text-decoration:none;" href="italian.jsp">
      		 <h2><center><b><%out.print(lbl_italian);%></b></center></h2>
