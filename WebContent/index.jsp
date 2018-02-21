@@ -25,6 +25,13 @@ String lbl_news = trans.getTrans(lang,"News");
 String lbl_contact = trans.getTrans(lang,"Contact");
 String lbl_about = trans.getTrans(lang,"About");
 
+//Placeholder strings 
+String lbl_email = trans.getTrans(lang,"Email Address");
+String lbl_fullName = trans.getTrans(lang,"User name");
+String lbl_password = trans.getTrans(lang,"Password");
+String lbl_confirmPass = trans.getTrans(lang,"Confirm Password");
+
+
 %>
 
 
@@ -41,6 +48,21 @@ String lbl_about = trans.getTrans(lang,"About");
 		  <a href="#news"><%out.print(lbl_news);%></a>
 		  <a href="#contact"><%out.print(lbl_contact);%></a>
 		  <a href="#about"><%out.print(lbl_about);%></a>
+		  <div style="float: right;">
+	 			<small>
+	 				<% 
+	 					if(lang.equals("fr")) {
+	 					  	out.print("<a href=\"setlang.jsp?lang=en&path=/index.jsp\">");
+	 					  	out.print(lbl_elang);
+	 					} else {
+	 						 out.print("<a href=\"setlang.jsp?lang=fr&path=/index.jsp\">");
+	 						out.print(lbl_flang);
+	 					}
+	 					out.print("</a>");
+	 				%>
+			 		
+		 		</small>
+			</div>
 		</div> 
 	<div class="cont_centrar">
 		<div class="cont_login">
@@ -58,21 +80,6 @@ String lbl_about = trans.getTrans(lang,"About");
 			   		</div>
 	   			</div>
 	 			<div class="col_md_sign_up">
-		 			<div style="float: right;">
-			 			<small>
-			 				<% 
-			 					if(lang.equals("fr")) {
-			 					  	out.print("<a href=\"setlang.jsp?lang=en\">");
-			 					  	out.print(lbl_elang);
-			 					} else {
-			 						 out.print("<a href=\"setlang.jsp?lang=fr\">");
-			 						out.print(lbl_flang);
-			 					}
-			 					out.print("</a>");
-			 				%>
-					 		
-				 		</small>
-					</div>
 	 				<div class="cont_ba_opcitiy">
 		  				<h2><%out.print(lbl_signup);%></h2>
 		  				<button class="btn_sign_up" onclick="cambiar_sign_up()">
@@ -96,22 +103,22 @@ String lbl_about = trans.getTrans(lang,"About");
 					 <div class="cont_form_login">
 					 <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
 					    <h2><% out.print(lbl_login); %> </h2>
-					 <input type="text" name="username" required="required" placeholder="Email Address" />
-					 <input type="password" name="userpass" required="required" placeholder="Password" />
-					 <input class="btn_login" type="submit" value="Login"></input>
+					 <input type="text" name="username" required="required" placeholder="<% out.print(lbl_email); %>" />
+					 <input type="password" name="userpass" required="required" placeholder="<% out.print(lbl_password); %>" />
+			 		 <button class="btn_sign_up""><% out.print(lbl_login); %></button>			 
 					   </div>
 			   </form>
-			   
+			    <form action="SignUpServlet" method="post">
 			    <div class="cont_form_sign_up">
 			 <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
 			      <h2><% out.print(lbl_signup); %> </h2>
-			 <input type="text" placeholder="Email" />
-			 <input type="text" placeholder="User" />
-			 <input type="password" placeholder="Password" />
-			 <input type="password" placeholder="Confirm Password" />
-			 <button class="btn_sign_up" onclick="cambiar_sign_up()"><% out.print(lbl_signup); %></button>
-			 
+			 <input type="text" name="email" required="required" placeholder="<% out.print(lbl_email); %>" />
+			 <input type="text" name="full_name" required="required" placeholder="<% out.print(lbl_fullName); %>" />
+			 <input type="password" name="password" required="required" placeholder="<% out.print(lbl_password); %>" />
+			 <input type="password" name="confirm_pass" required="required" placeholder="<% out.print(lbl_confirmPass); %>" />
+			 <button class="btn_sign_up""><% out.print(lbl_signup); %></button>			 
 			   </div>
+			   </form>
 		    </div>
 	   </div>
   	</div>

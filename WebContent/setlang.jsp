@@ -14,7 +14,8 @@ if(session_language.equalsIgnoreCase("fr")
     session.setAttribute( "lang", session_language );
     // now we need to do a redirect
     // note: redirecting to project context.
-    response.sendRedirect( request.getContextPath() );
+    response.sendRedirect( request.getContextPath() + request.getParameter( "path" ));
+   
 } else {
     // use the default language in this case.
     session.setAttribute( "lang", default_language );

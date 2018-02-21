@@ -12,7 +12,7 @@ else if ("fr".equals( session.getAttribute("lang" ) ) )
     lang = "fr";
 else 
     lang = "en";
-          
+
 String lbl_title  = trans.getTrans(lang,"Welcome");
 String lbl_flang  = trans.getTrans(lang,"French");
 String lbl_elang  = trans.getTrans(lang,"English");
@@ -26,6 +26,8 @@ String lbl_home = trans.getTrans(lang,"Home");
 String lbl_news = trans.getTrans(lang,"News");
 String lbl_contact = trans.getTrans(lang,"Contact");
 String lbl_about = trans.getTrans(lang,"About");
+String lbl_sign_out = trans.getTrans(lang,"Sign out");
+
 
 %>
 <html>
@@ -42,14 +44,17 @@ String lbl_about = trans.getTrans(lang,"About");
 		  <a href="#news"><%out.print(lbl_news);%></a>
 		  <a href="#contact"><%out.print(lbl_contact);%></a>
 		  <a href="#about"><%out.print(lbl_about);%></a>
+		  <a class="active" href="index.jsp"><%out.print(lbl_sign_out);%></a>
 		  <div style="float: right;">
 	 			<small>
 	 				<% 
 	 					if(lang.equals("fr")) {
-	 					  	out.print("<a href=\"setlang.jsp?lang=en\">");
+	 					  	out.print("<a href=\"setlang.jsp?lang=en&path=/welcome.jsp\">");
+	 					  	
+
 	 					  	out.print(lbl_elang);
 	 					} else {
-	 						 out.print("<a href=\"setlang.jsp?lang=fr\">");
+	 						 out.print("<a href=\"setlang.jsp?lang=fr&path=/welcome.jsp\">");
 	 						out.print(lbl_flang);
 	 					}
 	 					out.print("</a>");
